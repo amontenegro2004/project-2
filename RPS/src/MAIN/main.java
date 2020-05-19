@@ -12,14 +12,20 @@ import javax.swing.UIManager;
 
 
 public class main {
+	//INSTANCE VARIABLES	
 	Timer timer;
 	Timer timer2;
+	
+	//CONSTRUCTOR
 	    public main(int seconds) {
 	        timer = new Timer();
 	        timer.schedule(new RemindTask(), seconds*1000);
 		}
 	    
-
+	/* This method runs the timer task, to cancel the timer and
+	* show a dialog box that your time is up, whether you win 
+	* or lose in the given time.
+	*/
 	    class RemindTask extends TimerTask {
 	        public void run() {
 	            
@@ -33,11 +39,14 @@ public class main {
 	            
 	        }
 	    }
+	/* Main method to run the program below
+	*/
 	public static void main(String[] args) {
 		
 		hi();
 		
 	}
+	//INSTANCE VARIABLES
 	static int tot = 0;
 	static int yscore = 0;
 	static String name1 = "";
@@ -59,7 +68,16 @@ public class main {
 	static ArrayList<Integer> computer = new ArrayList<Integer>();
 	static ArrayList<Integer> p2 = new ArrayList<Integer>();
 
-
+	/* First start with making imamge icons for each type of scenario
+	* in the game and change the colors of the different askepcts of
+	* the UI. After, there are if statements to decide what option you 
+	* choose to play, then type in the player name, and then an option
+	* dialog box to display what you want to score against the computer
+	* or player. More if statments to see if you get it right or wron.
+	* After a certain amount of times, it will say if you, the computer, 
+	* or the player won. Finally, it asks if you want to play again,
+	* if so, it will start again, if not, it exits the program.
+	*/
 	public static void hi2() {
     	ImageIcon icon = new ImageIcon(main.class.getResource("rps.png"));
     	ImageIcon pvp = new ImageIcon(main.class.getResource("p v p.JPG"));
@@ -355,6 +373,16 @@ if(g==4) {
 		
 		
 	}
+	/* First start with making imamge icons for each type of scenario
+	* in the game and change the colors of the different askepcts of
+	* the UI. After, there are if statements to decide what option you 
+	* choose to play, then type in the player name, and then an option
+	* dialog box to display what you want to score against the computer
+	* or player. More if statments to see if you get it right or wron.
+	* After a certain amount of times, it will say if you, the computer, 
+	* or the player won. Finally, it asks if you want to play again,
+	* if so, it will start again, if not, it exits the program.
+	*/
 	public static void hi() {
     	ImageIcon icon = new ImageIcon(main.class.getResource("rps.png"));
     	ImageIcon pvp = new ImageIcon(main.class.getResource("p v p.JPG"));
